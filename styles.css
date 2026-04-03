@@ -1,0 +1,168 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #000;
+  --secondary-color: #555;
+  --background-color: #fafafa;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #fafafa;
+    --secondary-color: #aaa;
+    --background-color: #000;
+  }
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Inter, sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+    color: var(--primary-color);
+    background-color: var(--background-color);
+}
+
+.container {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+
+/* HERO SECTION */
+
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.hero h1 {
+    writing-mode: sideways-lr;
+    font-size: 20vh;
+    font-weight: 500;
+    line-height: 1;
+    position: sticky;
+    bottom: 2rem;
+}
+
+
+/* CARDS */
+
+
+.tool-cards {
+    margin-top: 30vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 1rem;
+}
+
+.tool-cards a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.tool-cards .card-outer:not(:last-child) {
+    border-bottom: 1px solid var(--primary-color);
+    max-width: 1200px;
+}
+
+.card {
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 1rem;
+    transition: all 0.2s ease;
+}
+
+.card h2 {
+    font-size: 2.75rem;
+    font-weight: 400;
+}
+
+.card p {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+@media (hover: hover) {
+    .card:hover {
+        transform: skew(-12deg);
+    }
+}
+
+
+/* LINKS */
+
+
+.links {
+    margin-left: 5vw;
+    padding: 1rem 1rem 0 3rem;
+    color: var(--background-color);
+    background-color: var(--primary-color);
+    text-align: right;
+}
+
+.links-sticky {
+    position: sticky;
+    top: 1rem;
+}
+
+.links h2 {
+    font-size: clamp(2.75rem, 2vw, 6rem);
+    font-weight: 300;
+}
+
+.links p {
+    font-size: 2rem;
+    margin-top: 10vh;
+}
+
+.links a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease;
+}
+
+.links-list {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.links ul {
+    list-style: none;
+    font-size: clamp(2.75rem, 2vw, 6rem);
+    font-weight: 300;
+    position: sticky;
+}
+
+@media (hover: hover) {
+    /* Add hover effects for individual letters */
+    .letter-hover-effect span {
+        display: inline-block;
+        transition: transform 0.25s ease;
+    }
+
+    .letter-hover-effect span:nth-child(odd):hover {
+        transform: skewX(-15deg);
+    }
+
+    .letter-hover-effect span:nth-child(even):hover {
+        transform: skewX(15deg);
+    }
+
+    .links p a:hover, .links ul a:hover {
+        transform: skew(-12deg);
+    }
+}
