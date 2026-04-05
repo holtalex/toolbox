@@ -35,6 +35,18 @@ body {
     grid-template-columns: 1fr 2fr 1fr;
 }
 
+@media (max-width:1500px) {
+    .container {
+        grid-template-columns: 1fr 3fr;
+    }
+}
+
+@media (max-width: 1000px) {
+    .container {
+        display: block;
+    }
+}
+
 
 /* HERO SECTION */
 
@@ -52,6 +64,22 @@ body {
     line-height: 1;
     position: sticky;
     bottom: 2rem;
+}
+
+@media (max-width: 1000px) {
+    .hero {
+        display: block;
+        padding-left: 3vw;
+    }
+
+    .hero h1 {
+        writing-mode: horizontal-tb;
+        font-size: 20vw;
+        line-height: normal;
+        position: relative;
+        bottom: 0;
+
+    }
 }
 
 
@@ -97,6 +125,24 @@ body {
 @media (hover: hover) {
     .card:hover {
         transform: skew(-12deg);
+    }
+}
+
+@media (max-width: 1500px) {
+    .tool-cards {
+        padding-right: 5rem;
+    }
+
+    .tool-cards .card-outer:last-child .card{
+        padding-bottom: 0;
+    }
+}
+
+@media (max-width: 1000px) {
+    .tool-cards {
+        width: 93%;
+        margin: 0 auto;
+        padding-right: 0;
     }
 }
 
@@ -164,5 +210,85 @@ body {
 
     .links p a:hover, .links ul a:hover {
         transform: skew(-12deg);
+    }
+}
+
+@media (max-width: 1500px) {
+    .links {
+        height: fit-content;
+        grid-column: 1 / 3;
+        margin: 0;
+        margin-top: 5rem;
+        padding: 1rem 1.5rem 3rem 1.5rem;
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .links-sticky {
+        position: relative;
+    }
+
+    .links h2 {
+        margin-bottom: 2rem;
+    }
+
+    .links p {
+        margin-top: 0;
+    }
+
+    .links-list, .links ul {
+        position: relative;
+        bottom: 0;
+        right: 0;
+    }
+
+    .links ul {
+        text-align: right;
+        margin-left: 5rem;
+    }
+
+    .links ul li:not(:last-child) {
+        margin-bottom: 0.3rem;
+    }
+
+    .policy-text {
+        display: none;
+    }
+}
+
+@media (max-width: 1000px) {
+    .links, .links-sticky {
+        flex-direction: column;
+        align-items: start;
+    }
+    
+    .links {
+        padding: 1rem 1rem 1.5rem 1rem;
+    }
+
+    .links h2 {
+        writing-mode: horizontal-tb;
+        margin-bottom: 3rem;
+    }
+
+    .links p {
+        margin-left: 0;
+    }
+
+    .links ul {
+        margin-left: 0;
+        margin-top: 3rem;
+        text-align: left;
+    }
+
+    .links li {
+        display: inline-block;
+    }
+
+    .links-list ul li:not(:last-child) {
+        margin-right: 1rem;
+        margin-bottom: 0;
     }
 }
