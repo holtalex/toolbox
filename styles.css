@@ -79,7 +79,7 @@ body {
     .hero h1 {
         writing-mode: horizontal-tb;
         font-size: clamp(8rem, 20vw, 12rem);
-        position: relative;
+        position: static;
         bottom: 0;
     }
 
@@ -233,7 +233,7 @@ body {
     }
 
     .links-sticky {
-        position: relative;
+        position: static;
     }
 
     .links h2 {
@@ -245,7 +245,7 @@ body {
     }
 
     .links-list, .links ul {
-        position: relative;
+        position: static;
         bottom: 0;
         right: 0;
     }
