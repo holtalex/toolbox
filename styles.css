@@ -66,6 +66,10 @@ body {
     bottom: 2rem;
 }
 
+.hero-br {
+    display: none;
+}
+
 @media (max-width: 1000px) {
     .hero {
         display: block;
@@ -74,11 +78,13 @@ body {
 
     .hero h1 {
         writing-mode: horizontal-tb;
-        font-size: 20vw;
-        line-height: normal;
+        font-size: clamp(8rem, 20vw, 12rem);
         position: relative;
         bottom: 0;
+    }
 
+    .hero-br {
+        display: inline;
     }
 }
 
